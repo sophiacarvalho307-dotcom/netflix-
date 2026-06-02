@@ -90,7 +90,7 @@ body {
 
 .titulo-content h2 {
     font-size: 20px;
-    font-weight: semi-bold;
+    font-weight: normal;
     padding: 0; 
 }
 
@@ -114,6 +114,10 @@ body {
     color: #cf3636;
     border: 1px solid #616161;
     border-radius: 4px;
+}
+
+input[type="email"] {
+    font-size: 18px;
 }
 
 .inserir-email h3 {
@@ -146,45 +150,54 @@ body {
     z-index: 2; 
 }
 
-input[type="email"] {
-    font-size: 18px;
-}
+/* tela de início (Perfis) */
 
-/* tela de início */
-
-main {
+.perfis-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     gap: 60px;
+}
 
-    h1 {
-        font-size: 7vh;
-        font-weight: 300;
-    }
+.perfis-main h1 {
+    font-size: 7vh;
+    font-weight: 300;
 }
 
 .perfis {
     display: flex;
     gap: 20px;
-    
-
-    img {
-        width: 25vh;
-        border-radius: 4px;
-    }
-
-    p {
-        text-align: center;
-        color: #616161;
-    }
 }
 
-.perfil:hover {
-    transform: scale(1.05);
+.perfil a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     transition: transform 0.3s ease;
+}
+
+.perfil img {
+    width: 25vh;
+    border-radius: 4px;
+}
+
+.perfil p {
+    text-align: center;
+    color: #616161;
+    font-size: 1.1rem;
+}
+
+.perfil a:hover {
+    transform: scale(1.05);
+}
+
+.perfil a:hover p {
+    color: #ffffff;
 }
 
 .gerenciar-perfis {
@@ -201,4 +214,16 @@ main {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
+    transition: all 0.3s ease;
 }
+
+.botao-gerenciar-perfis:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* home */
+
+.home-header {
+    display: flex;
+    
